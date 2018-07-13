@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class Button extends React.Component{
 
     render(){
         return(
 
-            <button type="button">{this.props.text}</button>
+            <li>
+                <Link to={this.props.link}>{this.props.text}</Link>
+            </li>
 
         )
 
