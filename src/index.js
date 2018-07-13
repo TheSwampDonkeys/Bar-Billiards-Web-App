@@ -11,6 +11,7 @@ import PlayBilliards from "./pages/PlayBilliards"
 
 ReactDOM.render(
 
+<<<<<<< HEAD
     <HashRouter>
 
         <div>
@@ -21,6 +22,17 @@ ReactDOM.render(
         </div>
                 
     </HashRouter>,
+=======
+    <Router>
+        
+        <div>
+            <Link to="/"> Home </Link>
+
+            <Route exact path="/" component={Home} />
+        
+        </div>
+    </Router>,
+>>>>>>> e1972a4c36cb14a2920029f31084500aa326b47c
     
     document.getElementById('app')
 
