@@ -9,7 +9,9 @@ class PlayBilliards extends React.Component{
 
         return (
 
+            <div className="wrapper">
                 <h1> Play </h1>
+            </div>
 
         )
         

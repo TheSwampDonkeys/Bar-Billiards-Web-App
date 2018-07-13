@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from "../component/Button"
+import LinkButton from "../component/LinkButton"
 
 
 class Home extends React.Component{
@@ -12,8 +12,9 @@ class Home extends React.Component{
             <div id="home-wrapper" className="wrapper">
                 <h1> Bar Billiards </h1>
                 <ul>
-                    <Button text="Play Game" link="play"/>
-                    <Button text="Rules" link="/" />
+                    <LinkButton text="Play Game" link="play"/>
+                    <LinkButton text="Rules" link="/" />
+                    <LinkButton text="Top Scores" link="/" />
                 </ul>
             </div>
         )
