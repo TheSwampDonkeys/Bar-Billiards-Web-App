@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom'
 
 import "./sass/main.scss";
 
+import Home from "./pages/Home"
+
 ReactDOM.render(
 
-    <h1> Hello, world! </h1>,
+    <Home text="hello"/>,
+    
     document.getElementById('app')
 
 )
