@@ -10,6 +10,12 @@ class PlayerScoring extends React.Component{
 
                 <p> Player 1 </p>
 
+                <form>
+
+                    <input type="text"/>
+
+                </form>
+
             </div>
 
         )
