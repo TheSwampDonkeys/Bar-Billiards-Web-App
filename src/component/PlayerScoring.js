@@ -16,6 +16,13 @@ class PlayerScoring extends React.Component{
 
                 </form>
 
+                <div className="points-wrappers">WHITE POINTS BUTTONS WILL BE INSIDE HERE </div>
+
+                <div className="points-wrappers">RED POINTS BUTTONS WILL BE INSIDE HERE </div>
+
+                {/* score = X + Y */}
+
+                {/* RESET BUTTON */}
             </div>
 
         )
