@@ -11,14 +11,6 @@ class PlayBilliards extends React.Component{
             <div className="wrapper">
                 <h1> Play </h1>
 
-<<<<<<< HEAD
-                <div className="player-Score-Wrapper">
-                   
-                </div>
-
-                <div className="player-Score-Wrapper">
-                   
-=======
 
                 <div className="player-Score-Wrapper">
 
@@ -27,7 +19,6 @@ class PlayBilliards extends React.Component{
                     <PlayerScoring />
 
                     
->>>>>>> 195176fbe84c78a95be6d3b74b7890556ed71905
                 </div>
 
             </div>
