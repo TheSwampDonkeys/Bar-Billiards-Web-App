@@ -4,6 +4,8 @@
   "description": "Web app to help score a game of bar billiards",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --env.dev",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/TheSwampDonkeys/Bar-Billiards-Web-App/issues"
   },
-  "homepage": "https://github.com/TheSwampDonkeys/Bar-Billiards-Web-App#readme"
+  "homepage": "https://github.com/TheSwampDonkeys/Bar-Billiards-Web-App#readme",
+  "devDependencies": {
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
 }
