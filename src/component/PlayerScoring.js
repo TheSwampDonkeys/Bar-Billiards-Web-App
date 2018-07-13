@@ -8,7 +8,7 @@ class PlayerScoring extends React.Component{
 
             <div className="player-scoring-wrapper">
 
-                <h2> Player 1 </h2>
+                <p> Player 1 </p>
 
             </div>
 
