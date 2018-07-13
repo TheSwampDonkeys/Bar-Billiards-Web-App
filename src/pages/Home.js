@@ -9,7 +9,7 @@ class Home extends React.Component{
 
         return (
 
-            <div id="home-wrapper">
+            <div id="home-wrapper" className="wrapper">
                 <h1> Bar Billiards </h1>
                 <ul>
                     <Button text="Play Game" link="play"/>
