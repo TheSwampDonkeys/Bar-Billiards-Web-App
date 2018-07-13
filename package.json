@@ -1,0 +1,19 @@
+{
+  "name": "bar-billiards-web-app",
+  "version": "1.0.0",
+  "description": "Web app to help score a game of bar billiards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheSwampDonkeys/Bar-Billiards-Web-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheSwampDonkeys/Bar-Billiards-Web-App/issues"
+  },
+  "homepage": "https://github.com/TheSwampDonkeys/Bar-Billiards-Web-App#readme"
+}
