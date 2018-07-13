@@ -4,7 +4,7 @@
   "description": "Web app to help score a game of bar billiards",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --env.dev",
+    "dev": "webpack-dev-server --content-base dist/ --inline --hot --env.dev",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
