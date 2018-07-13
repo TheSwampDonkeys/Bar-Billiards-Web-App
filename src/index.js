@@ -11,12 +11,13 @@ import Home from "./pages/Home"
 ReactDOM.render(
 
     <Router>
-
-        <Link to="/"> Home </Link>
-
-        <Route exact path="/" component={Home} />
         
+        <div>
+            <Link to="/"> Home </Link>
+
+            <Route exact path="/" component={Home} />
         
+        </div>
     </Router>,
     
     document.getElementById('app')
