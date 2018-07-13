@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 
 import "./sass/main.scss";
@@ -9,7 +10,14 @@ import Home from "./pages/Home"
 
 ReactDOM.render(
 
-    <Home text="hello"/>,
+    <Router>
+
+        <Link to="/"> Home </Link>
+
+        <Route exact path="/" component={Home} />
+        
+        
+    </Router>,
     
     document.getElementById('app')
 
