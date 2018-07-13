@@ -40,7 +40,7 @@ module.exports = options => {
                 "sass-loader" // compiles Sass to CSS
 			]
 
-          }
+          },
         ]
       }
 
