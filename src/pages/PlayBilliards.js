@@ -14,9 +14,9 @@ class PlayBilliards extends React.Component{
 
                 <div className="player-Score-Wrapper">
 
-                    <PlayerScoring />
+                    <PlayerScoring scoreMultiplier={1} />
                     
-                    <PlayerScoring />
+                    <PlayerScoring scoreMultiplier={2} />
 
                     
                 </div>
