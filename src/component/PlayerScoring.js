@@ -21,21 +21,27 @@ class PlayerScoring extends React.Component{
 
                 </form>
 
-                <div className="points-wrappers">
+                <div className="score-buttons score-buttons-white">
 
-                    <ScoreButton />
+                    {scores.map((number) =>
                     
+                        <a> {number} </a>
+
+                    )}
 
                 </div>
-                {scores.map((number) =>
-                
-                   <a> {number * this.props.scoreMultiplier} </a>
-                   
-                )}
-                
 
-                <div className="points-wrappers">RED POINTS BUTTONS WILL BE INSIDE HERE </div>
+                <div className="score-buttons score-buttons-red">
 
+                    {scores.map((number) =>
+                    
+                        <a> {number * 2} </a>
+
+                    )}
+
+                </div>
+                
+                
                 {/* score = X + Y */}
 
                 {/* RESET BUTTON */}
