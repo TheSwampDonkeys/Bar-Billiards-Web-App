@@ -22,7 +22,6 @@ class PlayerScoring extends React.Component{
         this.nextTurn = this.nextTurn.bind(this)
         this.setName = this.setName.bind(this)
 
-
     }
 
     setPlayerTurnScore(newScore){
@@ -128,18 +127,19 @@ class PlayerScoring extends React.Component{
 
 
                 <div className="reset-button-container">   
-                     
-                    <button onClick={this.resetTurnPoints} className="reset-score-button button">
-                    
-                        Reset turn points
-                
-                    </button>    
 
                     <button onClick={this.resetAllPoints} className="reset-score-button button">
                     
-                         Reset all points 
-                    
+                        Reset All 
+               
                     </button>
+
+                     
+                    <button onClick={this.resetTurnPoints} className="reset-score-button button">
+                    
+                        Reset Turn
+                
+                    </button>    
 
                     <button onClick={this.nextTurn} className="next-turn-button button">
                     
