@@ -16,6 +16,7 @@ class PlayerScoring extends React.Component{
         }
 
         this.setPlayerTurnScore = this.setPlayerTurnScore.bind(this)
+        this.nextTurn = this.nextTurn.bind(this)
 
     }
 
@@ -35,7 +36,7 @@ class PlayerScoring extends React.Component{
 
         this.setState({
 
-            playerTotalScore: this.state.playerTurnScore,
+            playerTotalScore: this.state.playerTurnScore + this.state.playerTotalScore,
             playerTurnScore: 0
 
         })
