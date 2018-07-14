@@ -31,3 +31,8 @@ button{
         cursor: pointer;
     }
 }
+
+.button{
+    border-radius: 2px;
+    box-shadow: $box-shadow;
+}

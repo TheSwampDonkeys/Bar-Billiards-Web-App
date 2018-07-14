@@ -7,7 +7,7 @@ class LinkButton extends React.Component{
         return(
 
             <li>
-                <Link to={this.props.link}>{this.props.text}</Link>
+                <Link to={this.props.link} className="button"> {this.props.text} </Link>
             </li>
 
         )
