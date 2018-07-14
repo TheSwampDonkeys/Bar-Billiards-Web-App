@@ -26,13 +26,12 @@ h1, h2, h3, h4{
 }
 
 button{
+    cursor: pointer;
 
-    &:hover{
-        cursor: pointer;
-    }
 }
 
 .button{
     border-radius: 2px;
     box-shadow: $box-shadow;
+    cursor: pointer;
 }

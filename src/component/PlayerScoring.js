@@ -6,6 +6,26 @@ const scores = [10, 20, 30, 50, 100, 200]
 
 class PlayerScoring extends React.Component{
 
+    constructor(props){
+
+        super(props);
+
+        this.state = {
+            playerTotalScore: 0,
+            playerTurnScore: 0
+        }
+
+        this.setPlayerTurnScore = this.setPlayerTurnScore.bind(this)
+
+    }
+
+    setPlayerTurnScore(newScore){
+
+        let updatedScore = this.state.playerTurnScore + newScore
+        this.setState.playerTurnScore({playerTurnScore: updatedScore})
+
+    }
+
     render(){
 
 
@@ -27,7 +47,7 @@ class PlayerScoring extends React.Component{
 
                     {scores.map((number) =>
                     
-                        <ScoreButton scoreValue={number} buttonClass="score-button score-button-white" />
+                        <ScoreButton updateScore={this.setPlayerTurnScore} scoreValue={number} buttonClass="score-button score-button-white" />
 
                     )}
 
@@ -46,8 +66,9 @@ class PlayerScoring extends React.Component{
                 <div class="player-score">
                     <a class="player-score-heading"> Score: </a>
                     <div>
-                        <a class="player-total-score"> 1500 </a>
-                        <a class="player-turn-score"> + 900 </a>
+                        <a class="player-total-score"> {this.state.playerTotalScore} </a>
+                        <a class="player-total-score"> + </a>
+                        <a class="player-turn-score"> {this.state.playerTurnScore} </a>
                     </div>
                 </div>
 
