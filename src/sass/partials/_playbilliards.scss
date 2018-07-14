@@ -63,22 +63,22 @@
 
 }
 
-<<<<<<< HEAD
-.score-tally{
-
-}
-
 .reset-button-container{
+    width: 100%;
     display:flex;
     padding: 10px;
+    margin: auto;
 }
 
 .reset-score-button{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
     width: 40%;
-    margin: 5px;
+    height: 50px;
+    margin: auto;
     background: yellow;
     border: 5px solid $primary-black;
 }
 
-=======
->>>>>>> 656d60a8eaca6d908c1cdca9b1b611357448dd78
