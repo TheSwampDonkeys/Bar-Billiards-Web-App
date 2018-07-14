@@ -39,3 +39,20 @@
     }
 
 }
+
+.score-tally{
+
+}
+
+.reset-button-container{
+    display:flex;
+    padding: 10px;
+}
+
+.reset-score-button{
+    width: 40%;
+    margin: 5px;
+    background: yellow;
+    border: 5px solid $primary-black;
+}
+
