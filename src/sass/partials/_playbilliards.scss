@@ -2,10 +2,11 @@
 .player-score-wrapper{
     //height: 200px;
     width: 100%;
-    border: 5px solid black;
+    border: 5px solid $primary-black;
     margin: auto;
     margin-bottom: 10px;
     padding: 5px;
+
     .player-score-wrapper p{
         
     }
@@ -18,19 +19,21 @@
     .score-button{
         padding: 10px;
         margin: 5px;
+        height: 40px;
+        width: 40px;
         border: none;
-        border-radius: 20px;
+        border-radius: 50%;
+        font-weight: bold;
     }
 
     .score-button-white{
-
         background: $primary-white;
-
+        color: $primary-black;
     }
 
     .score-button-red{
-        
         background: $primary-red;
+        color: $primary-white;
 
     }
 
