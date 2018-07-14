@@ -68,6 +68,7 @@
     display:flex;
     padding: 10px;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .reset-score-button{
@@ -78,6 +79,19 @@
     width: 40%;
     height: 50px;
     margin: auto;
+    margin-bottom: 10px;
     background: yellow;
+    //border: 5px solid $primary-black;
+    
 }
 
+.next-turn-button{
+    display: flex;
+    width: 90%;
+    height: 50px;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    background: white;
+   
+}
