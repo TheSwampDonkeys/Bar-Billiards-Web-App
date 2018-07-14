@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ScoreButton from './ScoreButton';
 
 class PlayerScoring extends React.Component{
 
@@ -16,7 +17,12 @@ class PlayerScoring extends React.Component{
 
                 </form>
 
-                <div className="points-wrappers">WHITE POINTS BUTTONS WILL BE INSIDE HERE </div>
+                <div className="points-wrappers">
+
+                    <ScoreButton />
+                    WHITE POINTS BUTTONS WILL BE INSIDE HERE 
+
+                </div>
 
                 <div className="points-wrappers">RED POINTS BUTTONS WILL BE INSIDE HERE </div>
 
