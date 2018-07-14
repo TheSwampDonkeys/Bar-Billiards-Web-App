@@ -44,10 +44,11 @@ class PlayerScoring extends React.Component{
                 </div>
                 
                 <div class="player-score">
-
-                    <a class="player-total-score"> 1500 </a>
-                    <a class="player-turn-score"> + 900 </a>
-
+                    <a class="player-score-heading"> Score: </a>
+                    <div>
+                        <a class="player-total-score"> 1500 </a>
+                        <a class="player-turn-score"> + 900 </a>
+                    </div>
                 </div>
                 
                 <div className="score-tally">

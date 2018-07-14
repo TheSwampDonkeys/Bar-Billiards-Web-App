@@ -51,6 +51,9 @@
 
     .player-score{
         font-size: 26pt;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
         
         .player-turn-score{
             color: yellow;
