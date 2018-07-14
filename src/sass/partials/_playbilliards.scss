@@ -1,5 +1,5 @@
 
-.player-Score-Wrapper{
+.player-score-wrapper{
     //height: 200px;
     width: 100%;
     border: 5px solid black;
@@ -7,6 +7,27 @@
     margin-bottom: 10px;
 }
 
-.points-wrappers{
-    
+.score-buttons-wrapper{
+
+    padding: 10px;
+
+    .score-button{
+        padding: 10px;
+        margin: 5px;
+        border: none;
+        border-radius: 20px;
+    }
+
+    .score-button-white{
+
+        background: $primary-white;
+
+    }
+
+    .score-button-red{
+        
+        background: $primary-red;
+
+    }
+
 }
