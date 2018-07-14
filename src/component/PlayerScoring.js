@@ -16,6 +16,8 @@ class PlayerScoring extends React.Component{
         }
 
         this.setPlayerTurnScore = this.setPlayerTurnScore.bind(this)
+        this.resetTurnPoints = this.resetTurnPoints.bind(this)
+        this.resetAllPoints = this.resetAllPoints.bind(this)
 
     }
 
@@ -42,12 +44,30 @@ class PlayerScoring extends React.Component{
 
     }
 
+
+    resetTurnPoints(){
+        this.setState({
+
+            
+            playerTurnScore: 0
+
+        })
+    }
+
+    resetAllPoints(){
+        this.setState({
+
+            playerTurnScore: 0,
+            playerTotalScore: 0
+        })
+    }
+
     render(){
 
 
         return(
 
-            <div className="player-scoring-wrapper button">
+            <div className="player-scoring-wrapper">
 
                 <p>
                     {this.props.text}
@@ -91,17 +111,17 @@ class PlayerScoring extends React.Component{
 
                 <div className="reset-button-container">   
                      
-                    <div className="reset-score-button button">
+                    <button onClick={this.resetTurnPoints} className="reset-score-button button">
                     
-                        <p> Reset turn score </p>
+                        Reset Turn Points
                 
-                    </div>    
+                    </button>    
 
-                    <div className="reset-score-button button">
+                    <button onClick={this.resetAllPoints} className="reset-score-button button">
                     
-                        <p> Reset all points </p>
+                         Reset all points 
                     
-                    </div>
+                    </button>
 
                     <button onClick={this.nextTurn} className="next-turn-button button">
                     
