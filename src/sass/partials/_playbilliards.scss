@@ -10,31 +10,56 @@
     .player-score-wrapper p{
         
     }
-}
 
-.score-buttons-wrapper{
+    .score-buttons-wrapper{
 
-    padding: 10px;
-
-    .score-button{
         padding: 10px;
-        margin: 5px;
-        height: 40px;
-        width: 40px;
-        border: none;
-        border-radius: 50%;
-        font-weight: bold;
+    
+        .score-button{
+            padding: 10px;
+            margin: 5px;
+            height: 45px;
+            width: 45px;
+            border: none;
+            border-radius: 50%;
+            font-weight: bold;
+
+        }
+    
+        .score-button-white{
+            background: $primary-white;
+            color: $primary-black;
+
+            &:hover{
+                background: $secondary-white;
+            }
+
+        }
+    
+        .score-button-red{
+            background: $primary-red;
+            color: $primary-white;
+
+            
+            &:hover{
+                background: $secondary-red;
+            }
+    
+        }
+    
     }
 
-    .score-button-white{
-        background: $primary-white;
-        color: $primary-black;
-    }
+    .player-score{
+        text-align: left;
+        font-size: 26pt;
 
-    .score-button-red{
-        background: $primary-red;
-        color: $primary-white;
+        
+        .player-turn-score{
+            color: yellow;
+        }
+
 
     }
 
 }
+
