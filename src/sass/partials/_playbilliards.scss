@@ -23,6 +23,7 @@
             border: none;
             border-radius: 50%;
             font-weight: bold;
+            box-shadow: 1px 1px grey;
 
         }
     
@@ -39,8 +40,7 @@
         .score-button-red{
             background: $primary-red;
             color: $primary-white;
-
-            
+                    
             &:hover{
                 background: $secondary-red;
             }

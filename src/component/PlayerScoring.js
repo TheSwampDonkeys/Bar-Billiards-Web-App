@@ -50,9 +50,27 @@ class PlayerScoring extends React.Component{
 
                 </div>
                 
-                {/* score = X + Y */}
+                <div className="score-tally">
+                    
+                   <p> score = X + Y </p>
+                
+                </div>
 
-                {/* RESET BUTTON */}
+                <div className="reset-turnscore-button">
+                
+                reset
+            
+                </div>    
+
+
+                <div className="reset-totalscore-button">
+                
+                    reset
+                
+                </div>
+
+
+                
 
             </div>
 
