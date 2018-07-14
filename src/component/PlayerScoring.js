@@ -50,28 +50,21 @@ class PlayerScoring extends React.Component{
                         <a class="player-turn-score"> + 900 </a>
                     </div>
                 </div>
-                
-                <div className="score-tally">
+
+
+                <div className="reset-button-container">        
+                    <div className="reset-score-button">
                     
-                   <p> score = X + Y </p>
+                    <p>reset turn score</p>
                 
+                    </div>    
+
+                    <div className="reset-score-button">
+                    
+                        <p>reset all points</p>
+                    
+                    </div>
                 </div>
-
-                <div className="reset-turnscore-button">
-                
-                reset
-            
-                </div>    
-
-
-                <div className="reset-totalscore-button">
-                
-                    reset
-                
-                </div>
-
-
-                
 
             </div>
 
