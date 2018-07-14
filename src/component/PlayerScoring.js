@@ -70,10 +70,11 @@ class PlayerScoring extends React.Component{
                     
                     <p>Next turn</p>
                 
+                    </div>
+
                 </div>
 
-            </div>
-
+            </div>  
         )
 
 
