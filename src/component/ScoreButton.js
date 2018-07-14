@@ -6,7 +6,7 @@ class ScoreButton extends React.Component{
     render(){
         return(
 
-            <div className="ball">10</div>
+            <button className={this.props.buttonClass}> {this.props.scoreValue} </button>
 
         )
     }

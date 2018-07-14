@@ -23,21 +23,21 @@ class PlayerScoring extends React.Component{
 
                 </form>
 
-                <div className="score-buttons score-buttons-white">
+                <div className="score-buttons-wrapper">
 
                     {scores.map((number) =>
                     
-                        <a> {number} </a>
+                        <ScoreButton scoreValue={number} buttonClass="score-button score-button-white" />
 
                     )}
 
                 </div>
 
-                <div className="score-buttons score-buttons-red">
+                <div className="score-buttons-wrapper">
 
                     {scores.map((number) =>
                     
-                        <a> {number * 2} </a>
+                        <ScoreButton scoreValue={number * 2} buttonClass="score-button score-button-red" />
 
                     )}
 
