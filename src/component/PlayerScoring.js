@@ -1,9 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+const scores = [10, 20, 30, 50, 100, 200]
+
 class PlayerScoring extends React.Component{
 
     render(){
+
+
         return(
 
             <div className="player-scoring-wrapper">
@@ -16,6 +20,13 @@ class PlayerScoring extends React.Component{
 
                 </form>
 
+                {scores.map((number) =>
+                
+                   <a> {number * this.props.scoreMultiplier} </a>
+                   
+                )}
+                
+
                 <div className="points-wrappers">WHITE POINTS BUTTONS WILL BE INSIDE HERE </div>
 
                 <div className="points-wrappers">RED POINTS BUTTONS WILL BE INSIDE HERE </div>
@@ -23,6 +34,7 @@ class PlayerScoring extends React.Component{
                 {/* score = X + Y */}
 
                 {/* RESET BUTTON */}
+
             </div>
 
         )
