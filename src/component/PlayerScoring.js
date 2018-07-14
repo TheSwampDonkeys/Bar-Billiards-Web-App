@@ -13,7 +13,9 @@ class PlayerScoring extends React.Component{
 
             <div className="player-scoring-wrapper">
 
-                <p> Player 1 </p>
+                <p>
+                    {this.props.text}
+                </p>
 
                 <form>
 

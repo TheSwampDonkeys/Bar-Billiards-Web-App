@@ -14,13 +14,13 @@ class PlayBilliards extends React.Component{
 
                 <div className="player-Score-Wrapper">
 
-                    <PlayerScoring />
+                    <PlayerScoring text="Player One"/>
                         
                 </div>
 
                 <div className="player-Score-Wrapper">
 
-                    <PlayerScoring />
+                    <PlayerScoring text="Player Two"/>
 
                 </div>
 
