@@ -125,7 +125,7 @@ class PlayerScoring extends React.Component{
 
                     <button onClick={this.nextTurn} className="next-turn-button button">
                     
-                        <p> Next turn </p>
+                         Next turn 
                 
                     </button>
 
