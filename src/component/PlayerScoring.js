@@ -52,17 +52,23 @@ class PlayerScoring extends React.Component{
 
 
                 <div className="reset-button-container">        
-                    <div className="reset-score-button">
+                    <div className="reset-score-button button">
                     
                     <p>reset turn score</p>
                 
                     </div>    
 
-                    <div className="reset-score-button">
+                    <div className="reset-score-button button">
                     
                         <p>reset all points</p>
                     
                     </div>
+
+                    <div className="next-turn-button button">
+                    
+                    <p>Next turn</p>
+                
+                </div>
                 </div>
 
             </div>
