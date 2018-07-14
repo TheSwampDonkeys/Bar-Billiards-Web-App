@@ -23,18 +23,16 @@ class PlayerScoring extends React.Component{
 
                 <div className="points-wrappers">
 
-                    <ScoreButton {...scores.map((number) =>
-                
-                <a> {number * this.props.scoreMultiplier} </a>
-                
-             )}/>
-                    WHITE POINTS BUTTONS WILL BE INSIDE HERE 
+                    <ScoreButton />
+                    
 
                 </div>
+                {scores.map((number) =>
                 
+                   <a> {number * this.props.scoreMultiplier} </a>
+                   
+                )}
                 
-
-                <div className="points-wrappers">WHITE POINTS BUTTONS WILL BE INSIDE HERE </div>
 
                 <div className="points-wrappers">RED POINTS BUTTONS WILL BE INSIDE HERE </div>
 
