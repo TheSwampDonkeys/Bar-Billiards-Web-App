@@ -35,16 +35,10 @@ class PlayerScoring extends React.Component{
 
         this.setState({
 
-            playerTotalScore: this.state.playerTurnScore
+            playerTotalScore: this.state.playerTurnScore,
+            playerTurnScore: 0
 
         })
-
-        this.setState((prevState) => {
-
-            return { playerTurnScore: 0}
-
-        })
-
 
     }
 
@@ -109,7 +103,7 @@ class PlayerScoring extends React.Component{
                     
                     </div>
 
-                    <button onClick={nextTurn()} className="next-turn-button button">
+                    <button onClick={this.nextTurn} className="next-turn-button button">
                     
                         <p> Next turn </p>
                 
