@@ -15,10 +15,13 @@ class PlayBilliards extends React.Component{
                 <div className="player-Score-Wrapper">
 
                     <PlayerScoring />
-                    
+                        
+                </div>
+
+                <div className="player-Score-Wrapper">
+
                     <PlayerScoring />
 
-                    
                 </div>
 
             </div>
