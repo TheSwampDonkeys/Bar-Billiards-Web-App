@@ -34,11 +34,11 @@ button{
     border-radius: 2px;
     box-shadow: $box-shadow;
     cursor: pointer;
+    border: none;
+    font-weight: bold;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    font-weight: bold;
     margin: auto;
     margin-bottom: 10px;
-
+    font-size: 12pt;
 }
