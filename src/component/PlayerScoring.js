@@ -16,13 +16,15 @@ class PlayerScoring extends React.Component{
 
         this.state = {
             playerTotalScore: 0,
-            playerTurnScore: 0
+            playerTurnScore: 0,
+            playerName: this.props.text,
         }
 
         this.setPlayerTurnScore = this.setPlayerTurnScore.bind(this)
         this.resetTurnPoints = this.resetTurnPoints.bind(this)
         this.resetAllPoints = this.resetAllPoints.bind(this)
         this.nextTurn = this.nextTurn.bind(this)
+        this.setName = this.setName.bind(this)
 
     }
 
@@ -52,7 +54,6 @@ class PlayerScoring extends React.Component{
 
     resetTurnPoints(){
         this.setState({
-
             
             playerTurnScore: 0
 
@@ -64,7 +65,21 @@ class PlayerScoring extends React.Component{
 
             playerTurnScore: 0,
             playerTotalScore: 0
+
         })
+    }
+
+    setName(){
+
+        let newName = document.getElementById(this.props.textId).value
+
+        this.setState({
+
+            playerName: newName
+
+        })
+
+
     }
 
     render(){
@@ -74,13 +89,14 @@ class PlayerScoring extends React.Component{
 
             <div className="player-scoring-wrapper">
 
-                <p>
-                    {this.props.text}
+                <p className="player-names">
+                    {this.state.playerName}
                 </p>
 
                 <form>
 
-                    <input type="text"/>
+                    <input id={this.props.textId} type="text"/>
+                    <button onClick={this.setName} type="submit" className="button"> Change Name </button>
 
                 </form>
 
