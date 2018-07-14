@@ -2,7 +2,6 @@
 .player-score-wrapper{
     //height: 200px;
     width: 100%;
-    border: 5px solid $primary-black;
     margin: auto;
     margin-bottom: 10px;
     padding: 5px;
@@ -63,6 +62,10 @@
 
 }
 
+.player-scoring-wrapper{
+    background: $secondary-green;
+}
+
 .reset-button-container{
     width: 100%;
     display:flex;
@@ -81,8 +84,6 @@
     margin: auto;
     margin-bottom: 10px;
     background: yellow;
-    //border: 5px solid $primary-black;
-    
 }
 
 .next-turn-button{

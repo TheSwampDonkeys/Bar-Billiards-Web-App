@@ -47,7 +47,7 @@ class PlayerScoring extends React.Component{
 
         return(
 
-            <div className="player-scoring-wrapper">
+            <div className="player-scoring-wrapper button">
 
                 <p>
                     {this.props.text}
