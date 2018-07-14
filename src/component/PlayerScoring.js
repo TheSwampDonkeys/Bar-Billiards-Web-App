@@ -31,6 +31,23 @@ class PlayerScoring extends React.Component{
 
     }
 
+    nextTurn(){
+
+        this.setState({
+
+            playerTotalScore: this.state.playerTurnScore
+
+        })
+
+        this.setState((prevState) => {
+
+            return { playerTurnScore: 0}
+
+        })
+
+
+    }
+
     render(){
 
 
@@ -82,21 +99,21 @@ class PlayerScoring extends React.Component{
                      
                     <div className="reset-score-button button">
                     
-                        <p> reset turn score </p>
+                        <p> Reset turn score </p>
                 
                     </div>    
 
                     <div className="reset-score-button button">
                     
-                        <p> reset all points </p>
+                        <p> Reset all points </p>
                     
                     </div>
 
-                    <div className="next-turn-button button">
+                    <button onClick={nextTurn()} className="next-turn-button button">
                     
-                    <p>Next turn</p>
+                        <p> Next turn </p>
                 
-                    </div>
+                    </button>
 
                 </div>
 
