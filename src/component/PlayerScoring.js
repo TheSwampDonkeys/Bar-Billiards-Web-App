@@ -22,7 +22,12 @@ class PlayerScoring extends React.Component{
     setPlayerTurnScore(newScore){
 
         let updatedScore = this.state.playerTurnScore + newScore
-        this.setState.playerTurnScore({playerTurnScore: updatedScore})
+
+        this.setState((prevState) => {
+
+            return { playerTurnScore: prevState.playerTurnScore + newScore}
+
+        })
 
     }
 
@@ -57,7 +62,7 @@ class PlayerScoring extends React.Component{
 
                     {scores.map((number) =>
                     
-                        <ScoreButton scoreValue={number * 2} buttonClass="score-button score-button-red" />
+                        <ScoreButton updateScore={this.setPlayerTurnScore} scoreValue={number * 2} buttonClass="score-button score-button-red" />
 
                     )}
 

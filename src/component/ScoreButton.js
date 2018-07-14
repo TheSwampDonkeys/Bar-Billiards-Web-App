@@ -3,9 +3,17 @@ import { Link } from 'react-router-dom'
 
 class ScoreButton extends React.Component{
     
+    constructor(props){
+
+        super(props)
+
+        this.addScore = this.addScore.bind(this)
+
+
+    }
     
     addScore(e){
-        console.log(parseInt(e.target.value))
+        
         this.props.updateScore(parseInt(e.target.value))
 
     }
