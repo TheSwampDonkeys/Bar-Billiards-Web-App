@@ -50,11 +50,20 @@ class PlayerScoring extends React.Component{
                 
                 </div>
 
-                <div className="reset-score-button">
+                <div className="reset-turnscore-button">
+                
+                reset
+            
+                </div>    
+
+
+                <div className="reset-totalscore-button">
                 
                     reset
                 
                 </div>
+
+
                 
 
             </div>
