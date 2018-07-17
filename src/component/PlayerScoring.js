@@ -93,12 +93,12 @@ class PlayerScoring extends React.Component{
         var keyframes = anime({
             targets: '#player-scoring-wrapper',
             translateX: [
-                {value: '120%', duration: 300, elasticity: 0, opacity: 1},
-                {value: '0', duration: 500, elasticity: 0, opacity: 0}]
+                {value: '120%', duration: 1000, elasticity: 0}]
+                //{value: '0', duration: 500, elasticity: 0}]
         });
 
-        //let card = document.getElementById("player-scoring-wrapper")
-        //card.classList.toggle("slideOff")
+        let card = document.getElementById("player-scoring-wrapper")
+        card.classList.toggle("slideOn")
 
         // Timeline
         //     .add({
@@ -108,7 +108,7 @@ class PlayerScoring extends React.Component{
         //   })
         //   .add({
         //     targets: '#player-scoring-wrapper',
-        //     translateX: '-150%',
+        //     translateX: '0',
         //     easing: 'easeOutExpo'
         //   });
             

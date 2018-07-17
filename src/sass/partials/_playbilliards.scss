@@ -109,14 +109,15 @@
 }
 
 @keyframes slideOn{
-
+    
+        
     0%{
         transform: translateX(-150%);
-
     }
 
     100%{
         transform: translateX(0);
+        
     }
 
 }
@@ -126,6 +127,7 @@
 }
 
 .slideOn{
+    // transition-delay: 1s;
     animation: slideOn 1s;
 }
 
