@@ -33,6 +33,7 @@ class PlayerScoring extends React.Component{
             },
 
             currentPlayer: 1,
+            currentPlayerName: "Player 1",
             currentTurnScore: 0,
             currentTotalScore: 0
          
@@ -76,12 +77,6 @@ class PlayerScoring extends React.Component{
             return {currentTurnScore: prevState.currentTurnScore + newScore}
 
         })
-
-    }
-
-    getPlayerTotalScore(){
-
-        return "200"
 
     }
 
