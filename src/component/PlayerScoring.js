@@ -111,6 +111,9 @@ class PlayerScoring extends React.Component{
 
         } else {
 
+            let player2 = Object.assign({}, this.state.player2)
+            player2.playerTotalScore = player2.playerTotalScore + this.state.currentTurnScore
+
             this.setState({
             
                 currentPlayer: 1,
