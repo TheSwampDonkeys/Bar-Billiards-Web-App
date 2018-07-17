@@ -89,16 +89,20 @@ class PlayerScoring extends React.Component{
     nextTurn(){
 
         var Timeline = anime.timeline();
+        
 
-        var keyframes = anime({
+        var slideOffTest = anime({
             targets: '#player-scoring-wrapper',
-            translateX: [
-                {value: '120%', duration: 1000, elasticity: 0}]
-                //{value: '0', duration: 500, elasticity: 0}]
+            translateX: ['0, 150%'], duration: 2000, elasticity: 0
         });
 
-        let card = document.getElementById("player-scoring-wrapper")
-        card.classList.toggle("slideOn")
+        var slideOnTest = anime({
+            targets: '#player-scoring-wrapper',
+            translateX: ['-150%', '0'], duration: 2000, elasticity: 0
+        })
+
+        // let card = document.getElementById("player-scoring-wrapper")
+        // card.classList.toggle("slideOn")
 
         // Timeline
         //     .add({
