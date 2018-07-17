@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/TheSwampDonkeys/Bar-Billiards-Web-App#readme",
   "devDependencies": {
+    "animejs": "^2.2.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

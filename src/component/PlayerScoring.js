@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ScoreButton from './ScoreButton';
+import anime from 'animejs'
 
 
 const scores = [10, 20, 30, 50, 100, 200]
@@ -72,8 +73,30 @@ class PlayerScoring extends React.Component{
 
     }
 
+    slideOff(card){
+
+        card.classList.toggle("slideOff")
+        card.classList.toggle("slideOn")
+
+    }
+
+    slideOn(card){
+
+        card.classList.toggle("slideOn")
+        
+    }
 
     nextTurn(){
+
+        let card = document.getElementById("player-scoring-wrapper")
+        card.classList.toggle("slideOff")
+
+        anime({
+            targets: '#player-scoring-wrapper',
+            translateX: '150%',
+ 
+          });
+            
 
         if(this.state.currentPlayer == 1){
 
@@ -188,7 +211,7 @@ class PlayerScoring extends React.Component{
 
         return(
 
-            <div className="player-scoring-wrapper">
+            <div id="player-scoring-wrapper">
 
                 <div id="player-name-wrapper">
 
