@@ -94,14 +94,14 @@ class PlayerScoring extends React.Component{
         .add({
             targets: '#player-scoring-wrapper',
             translateX: ['0' , '150%'], 
-            duration: 1000, 
+            duration: 500, 
             elasticity: 0,
             easing: 'easeOutCirc'
         })
         .add({  
             targets: '#player-scoring-wrapper',
             translateX: ['-150%', '0'], 
-            duration: 1000, 
+            duration: 100, 
             elasticity: 0,
             easing: 'easeOutCirc'
         });
