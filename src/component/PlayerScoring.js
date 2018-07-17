@@ -88,14 +88,29 @@ class PlayerScoring extends React.Component{
 
     nextTurn(){
 
-        let card = document.getElementById("player-scoring-wrapper")
-        card.classList.toggle("slideOff")
+        var Timeline = anime.timeline();
 
-        anime({
+        var keyframes = anime({
             targets: '#player-scoring-wrapper',
-            translateX: '150%',
- 
-          });
+            translateX: [
+                {value: '120%', duration: 300, elasticity: 0, opacity: 1},
+                {value: '0', duration: 500, elasticity: 0, opacity: 0}]
+        });
+
+        //let card = document.getElementById("player-scoring-wrapper")
+        //card.classList.toggle("slideOff")
+
+        // Timeline
+        //     .add({
+        //     targets: '#player-scoring-wrapper',
+        //     translateX: '150%',
+        //     easing: 'easeOutExpo'
+        //   })
+        //   .add({
+        //     targets: '#player-scoring-wrapper',
+        //     translateX: '-150%',
+        //     easing: 'easeOutExpo'
+        //   });
             
 
         if(this.state.currentPlayer == 1){
