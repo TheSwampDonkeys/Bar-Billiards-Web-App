@@ -46,6 +46,12 @@ class PlayerScoring extends React.Component{
 
     }
 
+    componentWillMount(){
+        this.setState({
+            playerName: "Player 1"
+        })
+    }
+
     setPlayerTurnScore(newScore){
 
         // if(this.state.currentPlayer == 1){
@@ -103,13 +109,14 @@ class PlayerScoring extends React.Component{
             this.setState({
 
                 player1,
-                currentTotalScore: this.state.player2.playerTotalScore
+                currentTotalScore: this.state.player2.playerTotalScore,
+                playerName: this.state.player2.playerName
     
             })
 
             this.setState({
             
-                currentPlayer: 2
+                currentPlayer: 2,
     
             })
 
@@ -119,9 +126,16 @@ class PlayerScoring extends React.Component{
             player2.playerTotalScore = player2.playerTotalScore + this.state.currentTurnScore
 
             this.setState({
+        
+                player2,
+                currentTotalScore: this.state.player1.playerTotalScore,
+                playerName: this.state.player1.playerName
+    
+            })
+
+            this.setState({
             
                 currentPlayer: 1,
-                currentTotalScore: this.state.player1.playerTotalScore
     
             })
 
@@ -197,7 +211,7 @@ class PlayerScoring extends React.Component{
                 <div id="player-name-wrapper">
 
                     <p className="player-names">
-                        {this.state.player1.playerName}
+                        {this.state.playerName}
                     </p>
 
                     <button id="edit-player-name" className="button">
