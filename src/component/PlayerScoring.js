@@ -32,10 +32,10 @@ class PlayerScoring extends React.Component{
 
             },
 
+            currentTurnTemp:{},
+
             currentPlayer: 1,
-            currentPlayerName: "Player 1",
-            currentTurnScore: 0,
-            currentTotalScore: 0
+
          
         }
 
@@ -48,39 +48,25 @@ class PlayerScoring extends React.Component{
     }
 
     componentWillMount(){
+
+        let currentTurnTemp = Object.assign({}, this.state.player1)
+        
         this.setState({
-            playerName: "Player 1"
+
+            currentTurnTemp: this.state.player1
+
         })
+
     }
 
     setPlayerTurnScore(newScore){
 
-        // if(this.state.currentPlayer == 1){
+        let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
+        currentTurnTemp.playerTurnScore += newScore
 
-        //     let player1 = Object.assign({}, this.state.player1)
-        //     player1.playerTurnScore = player1.playerTurnScore + newScore
+        this.setState({
 
-        //     this.setState({
-
-        //         player1
-    
-        //     })
-            
-
-        // } else{
-
-        //     let player2 = Object.assign({}, this.state.player2)
-        //     player2.playerTurnScore = player2.playerTurnScore + newScore
-
-        //     this.setState({
-
-        //         player2
-    
-        //     })
-
-        this.setState((prevState) =>{
-
-            return {currentTurnScore: prevState.currentTurnScore + newScore}
+            currentTurnTemp
 
         })
 
@@ -89,90 +75,67 @@ class PlayerScoring extends React.Component{
 
     nextTurn(){
 
-        this.setState({
-
-            
-
-        })
-
-        
         if(this.state.currentPlayer == 1){
 
-            let player1 = Object.assign({}, this.state.player1)
-            player1.playerTotalScore = player1.playerTotalScore + this.state.currentTurnScore
-
+            let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
+            currentTurnTemp.playerTotalScore += currentTurnTemp.playerTurnScore
+            currentTurnTemp.playerTurnScore = 0
+        
             this.setState({
 
-                player1,
-                currentTotalScore: this.state.player2.playerTotalScore,
-                playerName: this.state.player2.playerName
-    
-            })
-
-            this.setState({
-            
+                player1: currentTurnTemp,
                 currentPlayer: 2,
+                currentTurnTemp: this.state.player2
     
             })
+
+            console.log(this.state)
+
 
         } else {
 
-            let player2 = Object.assign({}, this.state.player2)
-            player2.playerTotalScore = player2.playerTotalScore + this.state.currentTurnScore
+            let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
+            currentTurnTemp.playerTotalScore += currentTurnTemp.playerTurnScore
+            currentTurnTemp.playerTurnScore = 0
 
             this.setState({
-        
-                player2,
-                currentTotalScore: this.state.player1.playerTotalScore,
-                playerName: this.state.player1.playerName
-    
-            })
 
-            this.setState({
-            
+                player2: currentTurnTemp,
                 currentPlayer: 1,
+                currentTurnTemp: this.state.player1
     
             })
 
-            console.log(this.state.currentPlayer)
+            console.log(this.state)
 
         }
 
-        this.setState({
-            
-            currentTurnScore: 0
-
-        })
-
 
     }
-
-    updateAllInfo(){
-
-        if(this.state.currentPlayer == 1){
-
-
-
-        }
-
-    }
-
 
     resetTurnPoints(){
 
+        let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
+        currentTurnTemp.playerTurnScore = 0
+
         this.setState({
             
-            currentTurnScore: 0
+            currentTurnTemp
 
         })
+
     }
 
     resetAllPoints(){
 
-        this.setState({
+        let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
+        currentTurnTemp.playerTurnScore = 0
+        currentTurnTemp.playerTotalScore = 0
 
-            playerTurnScore: 0,
-            playerTotalScore: 0
+
+        this.setState({
+            
+            currentTurnTemp
 
         })
     }
@@ -181,20 +144,44 @@ class PlayerScoring extends React.Component{
 
         let newName = document.getElementById(this.props.textId).value
 
-        this.setState({
+        if(newName != ""){
 
-            playerName: newName
+            let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
+            currentTurnTemp.playerName = newName
+    
+            this.setState({
+    
+                currentTurnTemp
+    
+            })
+    
+            this.showEditForm()
+  
+        } else {
 
-        })
+            alert("Please input a name")
 
+        }
 
     }
 
-    componentDidMount(){
+    showEditForm(){
 
-        console.log(this.state)
+        let form = document.getElementById("name-change-input")
+
+        if (form.style.display === "none"){
+
+            form.style.display = "flex"
+
+        } else {
+
+            form.style.display = "none"
+
+        }
 
     }
+
+
 
     render(){
 
@@ -206,18 +193,21 @@ class PlayerScoring extends React.Component{
                 <div id="player-name-wrapper">
 
                     <p className="player-names">
-                        {this.state.playerName}
+                        {this.state.currentTurnTemp.playerName}
                     </p>
 
-                    <button id="edit-player-name" className="button">
+                    <button id="edit-player-name" className="button" onClick={this.showEditForm}>
                         <i class="fas fa-user-edit"></i>
                     </button>
+
                 </div>
 
-                <form id="name-change-input">
+                <form id="name-change-input" style={{display: "none"}}>
 
                     <input id={this.props.textId} type="text"/>
-                    <button onClick={this.setName} type="submit" className="button"> Change Name </button>
+                    <button onClick={this.setName} type="submit" className="button">
+                        <i class="fas fa-check"></i>
+                    </button>
 
                 </form>
 
@@ -244,9 +234,9 @@ class PlayerScoring extends React.Component{
                 <div class="player-score">
                     <a class="player-score-heading"> Score: </a>
                     <div>
-                        <a class="player-total-score"> {this.state.currentTotalScore} </a>
+                        <a class="player-total-score"> {this.state.currentTurnTemp.playerTotalScore} </a>
                         <a class="player-total-score"> + </a>
-                        <a class="player-turn-score"> {this.state.currentTurnScore} </a>
+                        <a class="player-turn-score"> {this.state.currentTurnTemp.playerTurnScore} </a>
                     </div>
                 </div>
 
