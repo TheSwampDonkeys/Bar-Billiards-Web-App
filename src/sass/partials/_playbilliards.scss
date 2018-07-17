@@ -44,10 +44,6 @@
 
     }
     
-    #name-change-input{
-        display: none;
-    }
-
     .player-score{
         font-size: 26pt;
         display: flex;
@@ -61,15 +57,14 @@
     }
 
     #player-name-wrapper{
-        position: relative;
+        display: flex;
+        justify-content: center;
 
         #edit-player-name{
-            position: absolute;
-            right: 0;
-            top: 0;
             padding: 5px;
+            color: $primary-black;
             background: $primary-yellow;
-            
+            margin: 5px;
         }
                 
         .player-names{
@@ -78,19 +73,32 @@
         }
     }
 
+    #name-change-input{
+        justify-content: center;
+        margin-top: 5px;
 
-    input[type=text]{
-        padding: 5px;
-        border-radius: 2px;
-        box-shadow: $box-shadow;
-        border: none;
+        input[type=text]{
+            padding: 5px;
+            border-radius: 2px;
+            box-shadow: $box-shadow;
+            border: none;
+        }
+
+        button{
+            margin: 0;
+            margin-left: 10px;
+            padding: 5px;
+            color: $primary-black;
+            background: $primary-yellow;
+        }
+
     }
 
 }
 
 .player-scoring-wrapper{
-    background: $secondary-green;
     box-shadow: $box-shadow;
+    border-radius: 2px;
 }
 
 .reset-button-container{
