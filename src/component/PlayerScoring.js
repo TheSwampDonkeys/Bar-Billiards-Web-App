@@ -48,6 +48,7 @@ class PlayerScoring extends React.Component{
 
     componentWillMount(){
         this.setState({
+            currentPlayer: 1,
             playerName: "Player 1"
         })
     }
@@ -167,7 +168,7 @@ class PlayerScoring extends React.Component{
 
         this.setState({
             
-            currentTurnScore: 0
+            currentTurnScore: 0,
 
         })
     }
@@ -176,8 +177,9 @@ class PlayerScoring extends React.Component{
 
         this.setState({
 
-            playerTurnScore: 0,
-            playerTotalScore: 0
+            currentTurnScore: 0,
+            
+            
 
         })
     }
