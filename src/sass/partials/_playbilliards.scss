@@ -96,9 +96,44 @@
 
 }
 
-.player-scoring-wrapper{
+@keyframes slideOff{
+
+    0%{
+
+    }
+
+    100%{
+        transform: translateX(150%);
+    }
+
+}
+
+@keyframes slideOn{
+
+    0%{
+        transform: translateX(-150%);
+
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+.slideOff{
+    animation: slideOff 1s;
+}
+
+.slideOn{
+    animation: slideOn 1s;
+}
+
+#player-scoring-wrapper{
     box-shadow: $box-shadow;
     border-radius: 2px;
+    // animation: slideOff 1s slideOn 1s;
+
 }
 
 .reset-button-container{
