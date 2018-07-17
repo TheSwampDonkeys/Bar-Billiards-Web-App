@@ -2,9 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ScoreButton from './ScoreButton';
 
+
 const scores = [10, 20, 30, 50, 100, 200]
 
+
 class PlayerScoring extends React.Component{
+
+
 
     constructor(props){
 
@@ -255,7 +259,7 @@ class PlayerScoring extends React.Component{
 
                     <button onClick={this.nextTurn} className="next-turn-button button">
                     
-                         Next turn 
+                         Add Points (Next turn) 
                 
                     </button>
 
