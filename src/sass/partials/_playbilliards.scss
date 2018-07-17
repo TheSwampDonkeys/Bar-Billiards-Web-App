@@ -41,7 +41,10 @@
     
         }
 
+    }
     
+    #name-change-input{
+        display: none;
     }
 
     .player-score{
@@ -56,9 +59,24 @@
 
     }
 
-    .player-names{
-        font-size: 16pt;
+    #player-name-wrapper{
+        position: relative;
+
+        #edit-player-name{
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 5px;
+            background: $primary-yellow;
+            
+        }
+                
+        .player-names{
+            font-size: 16pt;
+            padding: 5px;
+        }
     }
+
 
     input[type=text]{
         padding: 5px;

@@ -14,6 +14,7 @@ class ScoreButton extends React.Component{
     
     addScore(e){
         
+        console.log(e.target.value)
         this.props.updateScore(parseInt(e.target.value))
 
     }

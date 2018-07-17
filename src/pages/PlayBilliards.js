@@ -17,13 +17,7 @@ class PlayBilliards extends React.Component{
                     <PlayerScoring text="Player One" textId="player-1-input"/>
                         
                 </div>
-
-                <div className="player-score-wrapper">
-
-                    <PlayerScoring text="Player Two" textId="player-2-input"/>
-
-                </div>
-
+            
             </div>
         )
         
