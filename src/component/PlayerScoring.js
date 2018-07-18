@@ -179,7 +179,7 @@ class PlayerScoring extends React.Component{
 
     setName(){
 
-        let newName = document.getElementById(this.props.textId).value
+        let newName = document.getElementById("edit-name").value
 
         if(newName != ""){
 
@@ -243,7 +243,7 @@ class PlayerScoring extends React.Component{
 
                 <form id="name-change-input" style={{display: "none"}}>
 
-                    <input id={this.props.textId} type="text"/>
+                    <input id="edit-name" type="text"/>
                     <button onClick={this.setName} type="submit" className="button">
                         <i class="fas fa-check"></i>
                     </button>
