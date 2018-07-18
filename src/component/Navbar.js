@@ -18,7 +18,7 @@ class Navbar extends React.Component{
                     </li>
 
                     <li>
-                        <Link to={"/rules"} className="button"> Rules <i class="fas fa-book-open"></i> </Link>
+                        <a href="" className="button"> Rules <i class="fas fa-book-open"></i> </a>
                     </li>
                 </ul>
             </nav>
