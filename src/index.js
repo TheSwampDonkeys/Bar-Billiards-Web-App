@@ -18,7 +18,7 @@ ReactDOM.render(
 
             <Route exact path="/" component={Home} />
             <Route exact path="/play" component={PlayBilliards} />
-            <Route exact path="/rules" comonent={Rules} />
+            <Route exact path="/rules" component={Rules} />
             
         </div>
                 
