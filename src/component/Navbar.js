@@ -6,7 +6,7 @@ class Navbar extends React.Component{
     goToRules(){
 
         let rules = document.getElementById("rules-wrapper")
-        rules.scrollIntoView()
+        rules.scrollIntoView(true)
 
     }
 

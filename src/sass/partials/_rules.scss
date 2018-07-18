@@ -1,6 +1,8 @@
-.rules-wrapper{
+#rules-wrapper{
     box-shadow: $box-shadow;
     text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .swiper-pagination-bullet-active {
@@ -9,6 +11,6 @@
     background: yellow;
 }
 
-.rules-wrapper p{
+#rules-wrapper p{
     margin-bottom: 50px;
 }

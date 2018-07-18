@@ -128,8 +128,6 @@ class PlayerScoring extends React.Component{
     
             })
 
-            console.log(this.state)
-
 
         } else {
 
@@ -144,8 +142,6 @@ class PlayerScoring extends React.Component{
                 currentTurnTemp: this.state.player1
     
             })
-
-            console.log(this.state)
 
         }
 
@@ -241,7 +237,7 @@ class PlayerScoring extends React.Component{
 
                 </div>
 
-                <span> <a> {this.state.player1.playerName} ({this.state.player1.playerTotalScore}) </a> <a> --- </a> <a> {this.state.player2.playerName} ({this.state.player2.playerTotalScore}) </a> </span>
+                <span> <a> {this.state.player1.playerName} ({this.state.player1.playerTotalScore}) </a> <a> {this.state.player2.playerName} ({this.state.player2.playerTotalScore}) </a> </span>
 
                 <form id="name-change-input" style={{display: "none"}}>
 

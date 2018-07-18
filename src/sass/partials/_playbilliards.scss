@@ -134,7 +134,11 @@
 #player-scoring-wrapper{
     box-shadow: $box-shadow;
     border-radius: 2px;
-    // animation: slideOff 1s slideOn 1s;
+
+    span{
+        display: flex;
+        justify-content: space-around;
+    }
 
 }
 

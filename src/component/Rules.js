@@ -16,7 +16,7 @@ class Rules extends React.Component{
 
         return (
 
-            <div className="rules-wrapper">
+            <div id="rules-wrapper">
 
                 <h1>Rules</h1>
 
