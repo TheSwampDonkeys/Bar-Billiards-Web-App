@@ -10,15 +10,15 @@ class Navbar extends React.Component{
             <nav>
                 <ul>
                     <li>
-                        <Link to={"/"} className="button"> Home </Link>
+                        <Link to={"/"} className="button"> Home <i class="fas fa-home"></i> </Link>
                     </li>
 
                     <li>
-                        <Link to={"play"} className="button"> Play </Link>
+                        <Link to={"play"} className="button"> Play <i class="fas fa-beer"></i> </Link>
                     </li>
 
                     <li>
-                        <Link to={"/"} className="button"> Rules </Link>
+                        <Link to={"/"} className="button"> Rules <i class="fas fa-book-open"></i> </Link>
                     </li>
                 </ul>
             </nav>

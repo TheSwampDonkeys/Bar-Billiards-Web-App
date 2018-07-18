@@ -6,13 +6,19 @@ nav{
 
         li{
             list-style-type: none;
+            display: flex;
+            align-items: center;
 
             a{
                 background: $primary-red;
                 padding: 10px;
                 color: white;
                 text-decoration: none;
-                flex-grow: 1;
+
+
+                i{
+                    margin-left: 5px;
+                }
             }
 
         }
