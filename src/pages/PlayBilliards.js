@@ -3,6 +3,7 @@ import React from 'react'
 import PlayerScoring from './../component/PlayerScoring'
 
 import LinkButton from "../component/LinkButton"
+import Navbar from '../component/Navbar';
 
 class PlayBilliards extends React.Component{
 
@@ -13,7 +14,7 @@ class PlayBilliards extends React.Component{
             <div className="wrapper">
                 <h1> Play </h1>
 
-                <LinkButton text="Rules" link="play"/>
+                <Navbar/>
 
                 <div className="player-score-wrapper" >
 

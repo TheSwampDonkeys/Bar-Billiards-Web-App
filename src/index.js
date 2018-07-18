@@ -18,11 +18,6 @@ ReactDOM.render(
             <Route exact path="/" component={Home} />
             <Route exact path="/play" component={PlayBilliards} />
             <Route exact path="/rules" component={Rules} />
-<<<<<<< HEAD
-            
-=======
-
->>>>>>> 9f0ed0372882ccbb26f0472f6eb2aa0adab378f7
         </div>
                 
     </HashRouter>,

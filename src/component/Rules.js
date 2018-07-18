@@ -18,9 +18,9 @@ class Rules extends React.Component{
             </div>
 
             <Swiper>   
-                <div>Slide 1</div>
-                <div>Slide 2</div>
-                <div>Slide 3</div>
+                <div id="slide-one">Slide 1</div>
+                <div id="slide-two">Slide 2</div>
+                <div id="slide-three">Slide 3</div>
             </Swiper>
            </div> 
             
