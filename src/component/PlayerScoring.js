@@ -101,7 +101,7 @@ class PlayerScoring extends React.Component{
         .add({  
             targets: '#player-scoring-wrapper',
             translateX: ['-150%', '0'], 
-            duration: 100, 
+            duration: 500, 
             elasticity: 0,
             easing: 'easeOutCirc'
         });
@@ -227,6 +227,8 @@ class PlayerScoring extends React.Component{
 
             <div id="player-scoring-wrapper">
 
+            <a> Player 1: 500 - Player 2: 900 </a>
+
                 <div id="player-name-wrapper">
 
                     <p className="player-names">
@@ -289,7 +291,7 @@ class PlayerScoring extends React.Component{
                      
                     <button onClick={this.resetTurnPoints} className="reset-score-button button">
                     
-                        Reset Turn
+                        Foul (Reset Turn)
                 
                     </button>    
 
