@@ -1,3 +1,9 @@
-#ruleswrapper{
+.rules-wrapper{
+    box-shadow: $box-shadow;
     text-align: center;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: yellow;
 }

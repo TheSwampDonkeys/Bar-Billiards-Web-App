@@ -1,27 +1,45 @@
 import React from 'react'
 import Swiper from 'react-id-swiper';
 
-import Navbar from './../component/Navbar'
+const params = {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  };
 
 class Rules extends React.Component{
+
+    
 
     render() {
 
         return (
-            <div className="wrapper">
+            <div className="rules-wrapper">
                 <h1>Rules</h1>
 
-            <div id="rules-wrapper">
+            
 
-            <Navbar />
+            <Swiper {...params}>   
+                <div id="slide-one">
 
-            </div>
+                    <h2>Basic Play</h2>
+        
+                </div>
 
-            <Swiper>   
-                <div id="slide-one">Slide 1</div>
-                <div id="slide-two">Slide 2</div>
-                <div id="slide-three">Slide 3</div>
+                <div id="slide-two">
+                    
+                    <h2>Fouls</h2>
+                
+                </div>
+
+                <div id="slide-three">
+                
+                    <h2>Final Ball</h2>
+                    
+                </div>
             </Swiper>
+
            </div> 
             
         )
