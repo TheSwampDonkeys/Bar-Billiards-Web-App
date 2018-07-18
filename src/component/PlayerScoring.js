@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 import ScoreButton from './ScoreButton';
+import Rules from './Rules';
+
+
 import anime from 'animejs'
 
 
@@ -8,8 +12,6 @@ const scores = [10, 20, 30, 50, 100, 200]
 
 
 class PlayerScoring extends React.Component{
-
-
 
     constructor(props){
 
@@ -227,8 +229,6 @@ class PlayerScoring extends React.Component{
 
             <div id="player-scoring-wrapper">
 
-            <a> Player 1: 500 - Player 2: 900 </a>
-
                 <div id="player-name-wrapper">
 
                     <p className="player-names">
@@ -240,6 +240,8 @@ class PlayerScoring extends React.Component{
                     </button>
 
                 </div>
+
+                <span> <a> {this.state.player1.playerName} ({this.state.player1.playerTotalScore}) </a> <a> --- </a> <a> {this.state.player2.playerName} ({this.state.player2.playerTotalScore}) </a> </span>
 
                 <form id="name-change-input" style={{display: "none"}}>
 

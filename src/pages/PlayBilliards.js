@@ -2,6 +2,8 @@ import React from 'react'
 
 import Navbar from './../component/Navbar'
 import PlayerScoring from './../component/PlayerScoring'
+import Rules from './../component/Rules'
+
 
 class PlayBilliards extends React.Component{
 
@@ -18,6 +20,7 @@ class PlayBilliards extends React.Component{
                     <Navbar />
 
                     <PlayerScoring />
+                    <Rules />
                         
                 </div>
             
