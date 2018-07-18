@@ -3,6 +3,13 @@ import { Link } from 'react-router-dom'
 
 class Navbar extends React.Component{
 
+    goToRules(){
+
+        let rules = document.getElementById("rules-wrapper")
+        rules.scrollIntoView()
+
+    }
+
     render(){
 
         return(
@@ -18,7 +25,7 @@ class Navbar extends React.Component{
                     </li>
 
                     <li>
-                        <a href="" className="button"> Rules <i class="fas fa-book-open"></i> </a>
+                        <a className="button"> Rules <i class="fas fa-book-open" onClick={this.goToRules}></i> </a>
                     </li>
                 </ul>
             </nav>
