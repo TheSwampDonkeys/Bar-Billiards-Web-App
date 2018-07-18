@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { HashRouter, Route, Link } from 'react-router-dom'
 
-
 import "./sass/main.scss"
 
 import Home from "./pages/Home"
@@ -18,8 +17,8 @@ ReactDOM.render(
 
             <Route exact path="/" component={Home} />
             <Route exact path="/play" component={PlayBilliards} />
-            <Route exact path="/rules" comonent={Rules} />
-            
+            <Route exact path="/rules" component={Rules} />
+
         </div>
                 
     </HashRouter>,

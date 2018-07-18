@@ -17,7 +17,7 @@ class PlayBilliards extends React.Component{
 
                     <Navbar />
 
-                    <PlayerScoring text="Player One" textId="player-1-input"/>
+                    <PlayerScoring />
                         
                 </div>
             
