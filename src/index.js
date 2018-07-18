@@ -6,7 +6,7 @@ import "./sass/main.scss"
 
 import Home from "./pages/Home"
 import PlayBilliards from "./pages/PlayBilliards"
-import Rules from "./pages/Rules"
+import Rules from "./component/Rules"
 
 
 ReactDOM.render(
