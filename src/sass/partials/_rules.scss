@@ -1,5 +1,14 @@
-#rules-wrapper{
+.rules-wrapper{
     box-shadow: $box-shadow;
-    margin-top: 20px;
     text-align: center;
+}
+
+.swiper-pagination-bullet-active {
+    
+    opacity: 1;
+    background: yellow;
+}
+
+.rules-wrapper p{
+    margin-bottom: 50px;
 }

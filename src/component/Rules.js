@@ -1,26 +1,55 @@
 import React from 'react'
 import Swiper from 'react-id-swiper';
 
-import Navbar from './../component/Navbar'
+const params = {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  };
 
 class Rules extends React.Component{
+
+    
 
     render() {
 
         return (
 
-            <div className="wrapper" id="rules-wrapper">
+            <div className="rules-wrapper">
 
                 <h1>Rules</h1>
 
+            
 
+            <Swiper {...params}>   
+                <div id="slide-one">
 
-                    <Swiper>   
-                        <div id="slide-one">Slide 1</div>
-                        <div id="slide-two">Slide 2</div>
-                        <div id="slide-three">Slide 3</div>
-                    </Swiper>
+                    <h2>Basic Play</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Sed id justo faucibus, consequat arcu bibendum, vulputate neque. 
+                        Fusce dignissim, erat in imperdiet tempus, purus est consectetur enim, id lobortis lorem nunc non metus. 
+                        Donec non arcu vulputate, euismod ligula non, mattis ex. Donec nec mi sit amet dui hendrerit dictum.</p>
+                </div>
 
+                <div id="slide-two">
+                    
+                    <h2>Fouls</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Sed id justo faucibus, consequat arcu bibendum, vulputate neque. 
+                        Fusce dignissim, erat in imperdiet tempus, purus est consectetur enim, id lobortis lorem nunc non metus. 
+                        Donec non arcu vulputate, euismod ligula non, mattis ex. Donec nec mi sit amet dui hendrerit dictum.</p>
+                </div>
+
+                <div id="slide-three">
+                
+                    <h2>Final Ball</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Sed id justo faucibus, consequat arcu bibendum, vulputate neque. 
+                        Fusce dignissim, erat in imperdiet tempus, purus est consectetur enim, id lobortis lorem nunc non metus. 
+                        Donec non arcu vulputate, euismod ligula non, mattis ex. Donec nec mi sit amet dui hendrerit dictum.</p>
+                </div>
+            </Swiper>
 
            </div> 
             
