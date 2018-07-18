@@ -2,7 +2,6 @@ import React from 'react'
 
 import LinkButton from "../component/LinkButton"
 
-
 class Home extends React.Component{
 
     render() {
