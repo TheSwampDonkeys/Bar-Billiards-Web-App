@@ -1,4 +1,8 @@
 import React from 'react'
+<<<<<<< HEAD
+=======
+import Swiper from 'react-id-swiper';
+>>>>>>> 7d8b940767ee706f2f660d908e4ad0dea36a7d29
 
 import Navbar from './../component/Navbar'
 
@@ -7,6 +11,7 @@ class Rules extends React.Component{
     render() {
 
         return (
+<<<<<<< HEAD
 
             <div id="rules-wrapper" className="wrapper">
 
@@ -30,6 +35,27 @@ Exercitation enim id ipsum culpa culpa proident veniam laborum dolor consectetur
     }
 
 
+=======
+            <div className="wrapper">
+                <h1>Rules</h1>
+
+            <div id="rules-wrapper">
+
+            <Navbar />
+
+            </div>
+
+            <Swiper>   
+                <div id="slide-one">Slide 1</div>
+                <div id="slide-two">Slide 2</div>
+                <div id="slide-three">Slide 3</div>
+            </Swiper>
+           </div> 
+            
+        )
+        
+    }
+>>>>>>> 7d8b940767ee706f2f660d908e4ad0dea36a7d29
 }
 
 export default Rules

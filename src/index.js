@@ -17,7 +17,6 @@ ReactDOM.render(
 
             <Route exact path="/" component={Home} />
             <Route exact path="/play" component={PlayBilliards} />
-
         </div>
                 
     </HashRouter>,
