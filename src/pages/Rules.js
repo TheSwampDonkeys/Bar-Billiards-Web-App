@@ -1,5 +1,25 @@
 import React from 'react'
 
+<<<<<<< HEAD
+class Rules extends React.component{
+
+    render(){
+
+        return(
+            <h1> rules </h1>
+
+
+        )
+
+
+
+
+    }
+
+
+
+}
+=======
 class Rules extends React.Component{
 
     render() {
@@ -17,3 +37,4 @@ class Rules extends React.Component{
 }
 
 export default Rules
+>>>>>>> cfa2440b1481f862cef1de50ed092b491cd66bb2
