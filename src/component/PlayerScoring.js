@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import ScoreButton from './ScoreButton';
+import ScoreButtonGroup from './ScoreButtonGroup';
 import Rules from './Rules';
 
 
 import anime from 'animejs'
+import NameForm from './NameForm';
 
 
 const scores = [10, 20, 30, 50, 100, 200]
@@ -34,32 +35,30 @@ function PlayerScoring (){
 
     const currentTurnTemp = {};
 
-    function handleNameChange(player){
+    const handleNameChange = (newName) => {
 
-        console.log(player1);
+        if(currentPlayer == 1){
 
-
-        if(player == 1){
-
-            let temp = player1;
-
-            temp.playerName = "Changed";
-            console.log(temp);
-
-            setPlayer1(
-
-                temp
-        
-            );
-        }
-
-        else if(player == 2){
+            let tempPlayer = player1;
 
             setPlayer1({
 
-                playerName: "Player 2 changed",
-                playerTotalScore: 0,
-                playerTurnScore: 0
+                playerName: newName,
+                playerTotalScore: tempPlayer.playerTotalScore,
+                playerTurnScore: tempPlayer.playerTurnScore
+        
+            })
+        }
+
+        else if(currentPlayer == 2){
+
+            let tempPlayer = player2;
+
+            setPlayer2({
+
+                playerName: newName,
+                playerTotalScore: tempPlayer.playerTotalScore,
+                playerTurnScore: tempPlayer.playerTurnScore
         
             })
         }
@@ -79,22 +78,21 @@ function PlayerScoring (){
 
                 </p>
 
-                <button id="edit-player-name" className="button" onClick={ () => handleNameChange(currentPlayer) }>
+                {/* <button id="edit-player-name" className="button" onClick={ () => handleNameChange(currentPlayer) }>
                     <i class="fas fa-user-edit"></i>
-                </button>
+                </button> */}
 
             </div>
 
             <span> <a> {player1.playerName} ({player1.playerTotalScore}) </a> <a> {player2.playerName} ({player2.playerTotalScore}) </a> </span>
 
-            <form id="name-change-input" style={{display: "none"}}>
+            <NameForm handleNameChange={ handleNameChange }/>
 
-                <input id="edit-name" type="text"/>
-                <button type="submit" className="button">
-                    <i class="fas fa-check"></i>
-                </button>
 
-            </form>
+            <ScoreButtonGroup scores={scores} scoreMultiplier={1} buttonClass="score-button score-button-white" />
+            
+            <ScoreButtonGroup scores={scores} scoreMultiplier={2} buttonClass="score-button score-button-red" />
+
 
         </div>  
     )
