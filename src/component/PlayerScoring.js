@@ -44,11 +44,13 @@ function PlayerScoring (){
             let temp = player1;
 
             temp.playerName = "Changed";
+            temp.playerTotalScore = 100;
+            temp.playerTurnScore = 50;
             console.log(temp);
 
             setPlayer1(
 
-                temp
+               
         
             );
         }
