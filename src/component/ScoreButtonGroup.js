@@ -11,7 +11,7 @@ function ScoreButtonGroup(props){
 
             {props.scores.map((number, index) =>
             
-                <ScoreButtonElement key={index} scoreValue={number * props.scoreMultiplier} buttonClass={props.buttonClass} />
+                <ScoreButtonElement key={index} scoreValue={number * props.scoreMultiplier} buttonClass={props.buttonClass} handleScoreButton={props.handleScoreButton}/>
 
             )}
 

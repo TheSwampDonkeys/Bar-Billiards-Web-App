@@ -13,13 +13,13 @@ function PlayBilliards(){
             <h1> Play </h1>
 
             <Navbar/>
-
+            <hr></hr>
             <div className="player-score-wrapper" >
 
                 <PlayerScoring />
                     
             </div>
-
+            <hr></hr>
             <Rules />                 
         
         </div>

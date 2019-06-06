@@ -11,7 +11,6 @@ function NameForm(props){
         if(!name) return;
 
         props.handleNameChange(name);
-        console.log(name);
         setName('');
 
     }

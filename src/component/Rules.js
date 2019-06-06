@@ -5,7 +5,13 @@ const params = {
     pagination: {
       el: '.swiper-pagination',
       clickable: true
-    }
+    },
+    loop: true
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
+        
   };
 
 class Rules extends React.Component{
