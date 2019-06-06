@@ -34,6 +34,38 @@ function PlayerScoring (){
 
     const currentTurnTemp = {};
 
+    function handleNameChange(player){
+
+        console.log(player1);
+
+
+        if(player == 1){
+
+            let temp = player1;
+
+            temp.playerName = "Changed";
+            console.log(temp);
+
+            setPlayer1(
+
+                temp
+        
+            );
+        }
+
+        else if(player == 2){
+
+            setPlayer1({
+
+                playerName: "Player 2 changed",
+                playerTotalScore: 0,
+                playerTurnScore: 0
+        
+            })
+        }
+
+    }
+
 
     return(
 
@@ -42,10 +74,12 @@ function PlayerScoring (){
             <div id="player-name-wrapper">
 
                 <p className="player-names">
-                    {player1.playerName}
+
+                    {player1.playerName}                   
+
                 </p>
 
-                <button id="edit-player-name" className="button">
+                <button id="edit-player-name" className="button" onClick={ () => handleNameChange(currentPlayer) }>
                     <i class="fas fa-user-edit"></i>
                 </button>
 
