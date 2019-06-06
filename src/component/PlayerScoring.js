@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import ScoreButton from './ScoreButton';
@@ -11,302 +11,112 @@ import anime from 'animejs'
 const scores = [10, 20, 30, 50, 100, 200]
 
 
-class PlayerScoring extends React.Component{
 
-    constructor(props){
+function PlayerScoring (){
 
-        super(props);
+    const [player1, setPlayer1] = useState({
 
-        this.state = {
+        playerName: "Connor",
+        playerTotalScore: 0,
+        playerTurnScore: 0
 
-            player1: {
+    })
 
-                playerName: "Player 1",
-                playerTotalScore: 0,
-                playerTurnScore: 0,
+    const [player2, setPlayer2] = useState({
 
-            },
+        playerName: "Fin",
+        playerTotalScore: 0,
+        playerTurnScore: 0
 
-            player2: {
+    })
 
-                playerName: "Player 2",
-                playerTotalScore: 0,
-                playerTurnScore: 0,
+    const [currentPlayer, setCurrentPlayer] = useState(1);
 
-            },
-
-            currentTurnTemp:{},
-
-            currentPlayer: 1,
-
-         
-        }
-
-        this.setPlayerTurnScore = this.setPlayerTurnScore.bind(this)
-        this.resetTurnPoints = this.resetTurnPoints.bind(this)
-        this.resetAllPoints = this.resetAllPoints.bind(this)
-        this.nextTurn = this.nextTurn.bind(this)
-        this.setName = this.setName.bind(this)
-
-    }
-
-    componentWillMount(){
-
-        let currentTurnTemp = Object.assign({}, this.state.player1)
-        
-        this.setState({
-
-            currentTurnTemp: this.state.player1
-
-        })
-
-    }
-
-    setPlayerTurnScore(newScore){
-
-        let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
-        currentTurnTemp.playerTurnScore += newScore
-
-        this.setState({
-
-            currentTurnTemp
-
-        })
-
-    }
-
-    slideOff(card){
-
-        card.classList.toggle("slideOff")
-        card.classList.toggle("slideOn")
-
-    }
-
-    slideOn(card){
-
-        card.classList.toggle("slideOn")
-        
-    }
-
-    nextTurn(){
-
-        var Timeline = anime.timeline();
-        
-        Timeline
-        .add({
-            targets: '#player-scoring-wrapper',
-            translateX: ['0' , '150%'], 
-            duration: 500, 
-            elasticity: 0,
-            easing: 'easeOutCirc'
-        })
-        .add({  
-            targets: '#player-scoring-wrapper',
-            translateX: ['-150%', '0'], 
-            duration: 500, 
-            elasticity: 0,
-            easing: 'easeOutCirc'
-        });
-
-        
-
-        // let card = document.getElementById("player-scoring-wrapper")
-        // card.classList.toggle("slideOn")
+    const currentTurnTemp = {};
 
 
-        if(this.state.currentPlayer == 1){
+    return(
 
-            let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
-            currentTurnTemp.playerTotalScore += currentTurnTemp.playerTurnScore
-            currentTurnTemp.playerTurnScore = 0
-        
-            this.setState({
+        <div id="player-scoring-wrapper">
 
-                player1: currentTurnTemp,
-                currentPlayer: 2,
-                currentTurnTemp: this.state.player2
-    
-            })
+            <div id="player-name-wrapper">
 
+                <p className="player-names">
+                    {player1.playerName}
+                </p>
 
-        } else {
+                <button id="edit-player-name" className="button">
+                    <i class="fas fa-user-edit"></i>
+                </button>
 
-            let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
-            currentTurnTemp.playerTotalScore += currentTurnTemp.playerTurnScore
-            currentTurnTemp.playerTurnScore = 0
+            </div>
 
-            this.setState({
+            <span> <a> {player1.playerName} ({player1.playerTotalScore}) </a> <a> {player2.playerName} ({player2.playerTotalScore}) </a> </span>
 
-                player2: currentTurnTemp,
-                currentPlayer: 1,
-                currentTurnTemp: this.state.player1
-    
-            })
+            <form id="name-change-input" style={{display: "none"}}>
 
-        }
+                <input id="edit-name" type="text"/>
+                <button type="submit" className="button">
+                    <i class="fas fa-check"></i>
+                </button>
 
+            </form>
+{/* 
+            <div className="score-buttons-wrapper">
 
-    }
+                {scores.map((number) =>
+                
+                    <ScoreButton updateScore={this.setPlayerTurnScore} scoreValue={number} buttonClass="score-button score-button-white" />
 
-    resetTurnPoints(){
+                )}
 
-        let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
-        currentTurnTemp.playerTurnScore = 0
+            </div>
 
-        this.setState({
+            <div className="score-buttons-wrapper">
+
+                {scores.map((number) =>
+                
+                    <ScoreButton updateScore={this.setPlayerTurnScore} scoreValue={number * 2} buttonClass="score-button score-button-red" />
+
+                )}
+
+            </div>
             
-            currentTurnTemp
-
-        })
-
-    }
-
-    resetAllPoints(){
-
-        let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
-        currentTurnTemp.playerTurnScore = 0
-        currentTurnTemp.playerTotalScore = 0
+            <div class="player-score">
+                <a class="player-score-heading"> Score: </a>
+                <div>
+                    <a class="player-total-score"> {this.state.currentTurnTemp.playerTotalScore} </a>
+                    <a class="player-total-score"> + </a>
+                    <a class="player-turn-score"> {this.state.currentTurnTemp.playerTurnScore} </a>
+                </div>
+            </div>
 
 
-        this.setState({
+            <div className="reset-button-container">   
+
+                <button onClick={this.resetAllPoints} className="reset-score-button button">
+                
+                    Reset All 
             
-            currentTurnTemp
+                </button>
 
-        })
-    }
-
-    setName(){
-
-        let newName = document.getElementById("edit-name").value
-
-        if(newName != ""){
-
-            let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
-            currentTurnTemp.playerName = newName
-    
-            this.setState({
-    
-                currentTurnTemp
-    
-            })
-    
-            this.showEditForm()
-  
-        } else {
-
-            alert("Please input a name")
-
-        }
-
-    }
-
-    showEditForm(){
-
-        let form = document.getElementById("name-change-input")
-
-        if (form.style.display === "none"){
-
-            form.style.display = "flex"
-
-        } else {
-
-            form.style.display = "none"
-
-        }
-
-    }
-
-
-
-    render(){
-
-
-        return(
-
-            <div id="player-scoring-wrapper">
-
-                <div id="player-name-wrapper">
-
-                    <p className="player-names">
-                        {this.state.currentTurnTemp.playerName}
-                    </p>
-
-                    <button id="edit-player-name" className="button" onClick={this.showEditForm}>
-                        <i class="fas fa-user-edit"></i>
-                    </button>
-
-                </div>
-
-                <span> <a> {this.state.player1.playerName} ({this.state.player1.playerTotalScore}) </a> <a> {this.state.player2.playerName} ({this.state.player2.playerTotalScore}) </a> </span>
-
-                <form id="name-change-input" style={{display: "none"}}>
-
-                    <input id="edit-name" type="text"/>
-                    <button onClick={this.setName} type="submit" className="button">
-                        <i class="fas fa-check"></i>
-                    </button>
-
-                </form>
-
-                <div className="score-buttons-wrapper">
-
-                    {scores.map((number) =>
                     
-                        <ScoreButton updateScore={this.setPlayerTurnScore} scoreValue={number} buttonClass="score-button score-button-white" />
-
-                    )}
-
-                </div>
-
-                <div className="score-buttons-wrapper">
-
-                    {scores.map((number) =>
-                    
-                        <ScoreButton updateScore={this.setPlayerTurnScore} scoreValue={number * 2} buttonClass="score-button score-button-red" />
-
-                    )}
-
-                </div>
+                <button onClick={this.resetTurnPoints} className="reset-score-button button">
                 
-                <div class="player-score">
-                    <a class="player-score-heading"> Score: </a>
-                    <div>
-                        <a class="player-total-score"> {this.state.currentTurnTemp.playerTotalScore} </a>
-                        <a class="player-total-score"> + </a>
-                        <a class="player-turn-score"> {this.state.currentTurnTemp.playerTurnScore} </a>
-                    </div>
-                </div>
+                    Foul (Reset Turn)
+            
+                </button>    
 
-
-                <div className="reset-button-container">   
-
-                    <button onClick={this.resetAllPoints} className="reset-score-button button">
-                    
-                        Reset All 
-               
-                    </button>
-
-                     
-                    <button onClick={this.resetTurnPoints} className="reset-score-button button">
-                    
-                        Foul (Reset Turn)
+                <button onClick={this.nextTurn} className="next-turn-button button">
                 
-                    </button>    
+                        Add Points (Next turn) 
+            
+                </button>
 
-                    <button onClick={this.nextTurn} className="next-turn-button button">
-                    
-                         Add Points (Next turn) 
-                
-                    </button>
+            </div> */}
 
-                </div>
-
-            </div>  
-        )
-
-
-    }
-
+        </div>  
+    )
 
 }
 

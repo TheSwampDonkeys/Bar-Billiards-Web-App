@@ -2,33 +2,28 @@ import React from 'react'
 
 import PlayerScoring from './../component/PlayerScoring'
 import Rules from './../component/Rules'
-import Navbar from '../component/Navbar';
+import Navbar from '../component/Navbar'
 
-class PlayBilliards extends React.Component{
+function PlayBilliards(){
 
-    render() {
+    return (
 
-        return (
+        <div className="wrapper">
 
-            <div className="wrapper">
+            <h1> Play </h1>
 
-                <h1> Play </h1>
+            <Navbar/>
 
-                <Navbar/>
+            <div className="player-score-wrapper" >
 
-                <div className="player-score-wrapper" >
-
-                    <PlayerScoring />
-                        
-                </div>
-
-                <Rules />                 
-            
+                <PlayerScoring />
+                    
             </div>
-        )
-        
-    }
 
+            <Rules />                 
+        
+        </div>
+    )
 
 }
 
