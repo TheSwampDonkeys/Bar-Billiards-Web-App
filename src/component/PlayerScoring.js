@@ -98,7 +98,7 @@ class PlayerScoring extends React.Component{
             translateX: ['0' , '150%'], 
             duration: 500, 
             elasticity: 0,
-            easing: 'easeOutCirc'
+            easing: 'easeInOutSine'
         })
         .add({  
             targets: '#player-scoring-wrapper',
