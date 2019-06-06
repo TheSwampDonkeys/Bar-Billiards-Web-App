@@ -65,6 +65,24 @@ function PlayerScoring (){
 
     }
 
+    const handleNextTurn = (currentPlayer) => {
+
+        if(currentPlayer == 1){
+            setCurrentPlayer(2)
+
+            console.log(currentPlayer);
+
+        }
+
+        if(currentPlayer == 2){
+            setCurrentPlayer(1)
+
+            console.log(currentPlayer);
+
+        }
+
+    }
+
 
     return(
 
@@ -74,7 +92,7 @@ function PlayerScoring (){
 
                 <p className="player-names">
 
-                    {player1.playerName}                   
+                    {currentPlayer == 1 ? player1.playerName : player2.playerName}
 
                 </p>
 
@@ -84,14 +102,18 @@ function PlayerScoring (){
 
             </div>
 
-            <span> <a> {player1.playerName} ({player1.playerTotalScore}) </a> <a> {player2.playerName} ({player2.playerTotalScore}) </a> </span>
+            <span> 
+                <a> {player1.playerName} ({player1.playerTotalScore}) </a> 
+                <a> {player2.playerName} ({player2.playerTotalScore}) </a> 
+            </span>
 
             <NameForm handleNameChange={ handleNameChange }/>
-
 
             <ScoreButtonGroup scores={scores} scoreMultiplier={1} buttonClass="score-button score-button-white" />
             
             <ScoreButtonGroup scores={scores} scoreMultiplier={2} buttonClass="score-button score-button-red" />
+
+            <button value="Next turn" onClick={ () => handleNextTurn(currentPlayer) } > Next turn </button>
 
 
         </div>  
