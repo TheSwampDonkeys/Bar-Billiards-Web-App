@@ -15,6 +15,13 @@ class Home extends React.Component{
                     <LinkButton text="Rules" link="rules" />
                     <LinkButton text="Top Scores" link="/" />
                 </ul>
+
+                <footer>
+
+                    <p> Made by <a href="https://connordowson.com" target="_blank"> Connor Dowson </a> and Fin Hards </p>
+
+                </footer>
+
             </div>
         )
         

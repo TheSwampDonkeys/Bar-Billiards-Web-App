@@ -6,7 +6,7 @@ import "./sass/main.scss"
 
 import Home from "./pages/Home"
 import PlayBilliards from "./pages/PlayBilliards"
-// import Rules from "./pages/Rules"
+import Rules from "./pages/Rules"
 
 
 ReactDOM.render(
@@ -14,9 +14,9 @@ ReactDOM.render(
     <HashRouter>
 
         <div>
-
             <Route exact path="/" component={Home} />
             <Route exact path="/play" component={PlayBilliards} />
+            <Route exact path="/rules" component={Rules} />
         </div>
                 
     </HashRouter>,

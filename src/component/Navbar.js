@@ -25,7 +25,7 @@ class Navbar extends React.Component{
                     </li>
 
                     <li>
-                        <a className="button"> Rules <i class="fas fa-book-open" onClick={this.goToRules}></i> </a>
+                        <a className="button" onClick={this.goToRules}> Rules <i class="fas fa-book-open"></i> </a>
                     </li>
                 </ul>
             </nav>
