@@ -67,6 +67,98 @@ function PlayerScoring (){
                 {scores.map((number) =>
                 
                     <ScoreButton updateScore={this.setPlayerTurnScore} scoreValue={number} buttonClass="score-button score-button-white" />
+        let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
+        currentTurnTemp.playerTurnScore += newScore
+
+        this.setState({
+
+            currentTurnTemp
+
+        })
+
+    }
+
+    slideOff(card){
+
+        card.classList.toggle("slideOff")
+        card.classList.toggle("slideOn")
+
+    }
+
+    slideOn(card){
+
+        card.classList.toggle("slideOn")
+        
+    }
+
+    nextTurn(){
+
+        var Timeline = anime.timeline();
+        
+        Timeline
+        .add({
+            targets: '#player-scoring-wrapper',
+            translateX: ['0' , '150%'], 
+            duration: 500, 
+            elasticity: 0,
+            easing: 'easeInOutSine'
+        })
+        .add({  
+            targets: '#player-scoring-wrapper',
+            translateX: ['-150%', '0'], 
+            duration: 500, 
+            elasticity: 0,
+            easing: 'easeOutCirc'
+        });
+
+        
+
+        // let card = document.getElementById("player-scoring-wrapper")
+        // card.classList.toggle("slideOn")
+
+
+        if(this.state.currentPlayer == 1){
+
+            let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
+            currentTurnTemp.playerTotalScore += currentTurnTemp.playerTurnScore
+            currentTurnTemp.playerTurnScore = 0
+        
+            this.setState({
+
+                player1: currentTurnTemp,
+                currentPlayer: 2,
+                currentTurnTemp: this.state.player2
+    
+            })
+
+
+        } else {
+
+            let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
+            currentTurnTemp.playerTotalScore += currentTurnTemp.playerTurnScore
+            currentTurnTemp.playerTurnScore = 0
+
+            this.setState({
+
+                player2: currentTurnTemp,
+                currentPlayer: 1,
+                currentTurnTemp: this.state.player1
+    
+            })
+
+        }
+
+
+    }
+
+    resetTurnPoints(){
+
+        let currentTurnTemp = Object.assign({}, this.state.currentTurnTemp)
+        currentTurnTemp.playerTurnScore = 0
+
+        this.setState({
+            
+            currentTurnTemp
 
                 )}
 
