@@ -1,13 +1,13 @@
-.player-score-wrapper{
+.player-score-wrapper {
     width: 100%;
     margin: auto;
     margin-bottom: 10px;
     color: $primary-white;
 
-    .score-buttons-wrapper{
+    .score-buttons-wrapper {
         padding: 10px 0;
-        
-        .score-button{
+
+        .score-button {
             margin: 5px;
             height: 45px;
             width: 45px;
@@ -19,79 +19,79 @@
             font-size: 1.1rem;
 
         }
-    
-        .score-button-white{
+
+        .score-button-white {
             background: $primary-white;
             color: $primary-black;
 
-            &:hover{
+            &:hover {
                 background: $secondary-white;
             }
 
         }
-    
-        .score-button-red{
+
+        .score-button-red {
             background: $primary-red;
             color: $primary-white;
-                    
-            &:hover{
+
+            &:hover {
                 background: $secondary-red;
             }
-    
+
         }
 
     }
 
-    .all-player-scores{
-        a{
-            font-size: 1.1rem;
+    .all-player-scores {
+        a {
+            font-size: 18pt;
         }
     }
-    
-    .player-turn-wrapper{
-        font-size: 26pt;
-        max-width: 90%;
+
+    .player-turn-wrapper {
+        font-size: 23pt;
+        max-width: 100%;
         justify-content: center;
         margin: 0 auto 16px auto;
-        
-        .player-turn-score{
+
+        .player-turn-score {
             color: $gold-1;
         }
 
-        .player-turn-info{
+        .player-turn-info {
             display: flex;
             justify-content: space-between;
         }
 
     }
 
-    #player-name-wrapper{
+    #player-name-wrapper {
 
-        #edit-player-name{
+        #edit-player-name {
             padding: 5px;
             color: $primary-white;
             background: $gold-1;
             margin: 5px;
         }
-                
-        .player-names{
-            font-size: 1.5rem;
+
+        .player-names {
+            font-size: 18pt;
             padding: 5px;
         }
     }
 
-    #name-change-input{
+    #name-change-input {
         justify-content: center;
         margin-top: 12px;
 
-        input[type=text]{
+        input[type=text] {
             padding: 5px;
             border-radius: 2px;
             box-shadow: $box-shadow;
             border: none;
         }
 
-        button{
+        button {
             margin: 0;
             margin-left: 10px;
             padding: 5px;
@@ -103,68 +103,74 @@
 
 }
 
-@keyframes slideOff{
+@keyframes slideOff {
 
-    0%{
+    0% {}
 
-    }
-
-    100%{
+    100% {
         transform: translateX(150%);
     }
 
 }
 
-@keyframes slideOn{
-    
-        
-    0%{
+@keyframes slideOn {
+
+
+    0% {
         transform: translateX(-150%);
     }
 
-    100%{
+    100% {
         transform: translateX(0);
-        
+
     }
 
 }
 
-.slideOff{
+.slideOff {
     animation: slideOff 1s;
 }
 
-.slideOn{
+.slideOn {
     // transition-delay: 1s;
     animation: slideOn 1s;
 }
 
-#player-scoring-wrapper{
+#player-scoring-wrapper {
     box-shadow: $box-shadow;
     border-radius: 2px;
 
-    span{
+    span {
         display: flex;
         justify-content: space-around;
     }
 
 }
 
-.reset-button-container{
+.reset-button-container {
     width: 100%;
-    display:flex;
-    margin: auto;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.reset-score-button{
-    width: 40%;
+.reset-score-button {
+    width: 46%;
     height: 50px;
     background: $gold-1;
     font-size: 1.2rem;
 }
 
-.next-turn-button{
-    width: 90%;
+.reset-score-button:first-of-type {
+    margin-left: 0;
+}
+
+.reset-score-button:last-of-type {
+    margin-right: 0;
+}
+
+.next-turn-button {
+    width: 100%;
     height: 50px;
     background: $primary-white;
     font-size: 1.2rem;
